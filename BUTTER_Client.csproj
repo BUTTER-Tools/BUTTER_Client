@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15AD4715-2698-4398-93C4-611487FD8C83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BUTTER_Client</RootNamespace>
+    <AssemblyName>BUTTER</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BUTTER_Client.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>butter_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>90802F3A0D7776F6FA8B2450D869D1F40974A54A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CODE-BGWorker_Methods\BGWorker_Methods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-Initialize_Trees\TreeNodeRecursiveCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_EventHandlers\PluginContextMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_Button_Actions\BeginAndCancelAnalysisButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_Button_Actions\ChangePluginSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_Button_Actions\RemovePluginFromPipeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_Button_Actions\AddPluginToPipeline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_Button_Actions\SaveAndLoadPipeline.cs" />
+    <Compile Include="CODE-UI_Button_Actions\SaveAndLoadPipeline_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_EventHandlers\AnalysisPiplineTree_DragDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_EventHandlers\EventHandlers_AnalysisPipelineTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_EventHandlers\EventHandlers_AvailablePluginTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-Initialize_Trees\InitializePluginTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-Initialize_Trees\PopulateTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CODE-UI_EventHandlers\UpdateDescriptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoubleBufferedTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plug.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plugin_category.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butter_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries - Helpers\GenericPluginLoader\GenericPluginLoader.csproj">
+      <Project>{b60af822-86fc-4496-a5bf-9252c6994b46}</Project>
+      <Name>GenericPluginLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries - Helpers\log4net-2.0.8\src\log4net.vs2012.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net.vs2012</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries - Helpers\OutputPluginHelperObject\OutputPluginHelperLib.csproj">
+      <Project>{0c767a38-ec69-4687-879a-dccd77cbaafb}</Project>
+      <Name>OutputPluginHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries - Helpers\PluginContracts\PluginContracts.csproj">
+      <Project>{a786b34a-f929-47a2-a92d-4f2f474c9aa0}</Project>
+      <Name>PluginContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries - Helpers\ThreadsafeOutputWriter\ThreadsafeOutputWriter.csproj">
+      <Project>{3f04df04-9e44-4b8c-9809-af276915b3a9}</Project>
+      <Name>ThreadsafeOutputWriter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_02.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_03.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_04.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_05.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_06.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_07.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_08.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_09.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busy_Alt_00.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="butter_icon.ico" />
+    <None Include="Resources\butter.wav" />
+    <None Include="Resources\AllieSplashArt_02.jpg" />
+    <None Include="Resources\AllieSplashArt_01.jpg" />
+    <None Include="Resources\Busy_Alt_14.gif" />
+    <None Include="Resources\Busy_Alt_13.gif" />
+    <None Include="Resources\Busy_Alt_12.gif" />
+    <None Include="Resources\Busy_Alt_11.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y  "$(TargetDir)log4net.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Libs\"
+xcopy /y  "$(SolutionDir)Licenses" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Licenses\"
+xcopy /y  "$(SolutionDir)LICENSE-BUTTER.txt" "$(SolutionDir)BUTTER_Client\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
